@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Whiz Wiper™: Automated cleaning for urinal floors in high‑traffic restrooms.">
+  <title>Whiz Wiper™ - Automated Urinal Floor Cleaning</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">Whiz Wiper<span class="trademark">™</span></div>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <main id="main-content">
+    <section id="hero">
+      <div class="container">
+        <div class="split-layout">
+          <div class="text-column">
+            <h1>Introducing Whiz Wiper™</h1>
+            <h2>Automated Cleaning for Urinal Floors</h2>
+            <p class="hero-text">
+              Keep your restrooms consistently clean with a practical, automated solution designed specifically for high‑traffic urinals. No gimmicks—just reliable cleaning that simplifies maintenance.
+            </p>
+            <a href="mailto:Ed@whizwiper.com?subject=Interested%20in%20a%20Demo" class="cta-button">Request a Demo</a>
+          </div>
+          <div class="image-column">
+            <img src="images/website_main.png" alt="Whiz Wiper cleaning a urinal floor" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <h3>Automated Cleaning</h3>
+            <p>
+              Sensors and precision engineering deliver consistent cleaning for busy restrooms.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3>Durable Construction</h3>
+            <p>
+              Built from robust materials, Whiz Wiper™ withstands the rigors of high-traffic environments.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3>Maintenance Notifications</h3>
+            <p>
+              Receive timely alerts for cleaning cycles and maintenance needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <p>
+          Discover how Whiz Wiper™ can streamline your facility’s cleaning routine. Contact us to schedule a demo and learn more about our practical solution.
+        </p>
+        <a href="mailto:Ed@whizwiper.com?subject=Interested%20in%20a%20Demo" class="cta-button">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Whiz Wiper™. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      navList.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

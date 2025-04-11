@@ -3,140 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whiz Wiper<sup style="font-size: 60%;">™</sup></title>
+    <title>Whiz Wiper<sup class="trademark">™</sup></title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            color: #0F172A;
-            background-color: #ffffff;
-        }
-
-        header {
-            background-color: #1E293B;
-            color: white;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 1.5rem;
-            font-weight: 500;
-        }
-
-        .hero {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 6rem 6rem;
-            background: linear-gradient(to bottom, #475569, #64748B);
-            color: white;
-            flex-wrap: wrap;
-            gap: 3rem;
-        }
-
-        .hero-text {
-            max-width: 500px;
-            flex: 1 1 300px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .hero h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero p {
-            font-size: 1.125rem;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .hero button {
-            padding: 1rem 2rem;
-            border-radius: 9999px;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-        }
-
-        .hero-images {
-            flex: 1 1 400px;
-        }
-
-        .hero-images img {
-            width: 100%;
-            border-radius: 0.5rem;
-        }
-
-        .section {
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-
-        .section h2 {
-            font-size: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            background-color: #F1F5F9;
-            padding: 2rem;
-            border-radius: 0.75rem;
-            flex: 1 1 300px;
-            max-width: 400px;
-            text-align: left;
-        }
-
-        .footer-cta {
-            padding: 3rem 2rem;
-        }
-
-        .footer-cta button {
-            background-color: #E2E8F0;
-            color: #0F172A;
-            padding: 1.25rem 2.25rem;
-            border-radius: 9999px;
-            font-weight: 700;
-            border: none;
-            margin-top: 2rem;
-            cursor: pointer;
-        }
-
-        footer {
-            background-color: #0F172A;
-            color: #CBD5E1;
-            text-align: center;
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="nav-logo">WHIZ WIPER<sup style="font-size: 60%;">™</sup></div>
+        <div class="nav-logo">WHIZ WIPER<sup class="trademark">™</sup></div>
         <nav>
             <a href="#">Home</a>
             <a href="#challenge">The Challenge</a>
@@ -144,41 +17,45 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1 style="white-space: nowrap;">Introducing Whiz Wiper<sup style="font-size: 60%;">™</sup></h1>
-            <h2>Automated Cleaning for Urinal Floors</h2>
-            <p>Keep your restrooms consistently clean with a practical, automated solution designed for high-traffic urinals. No gimmicks—just a reliable way to simplify your cleaning routine.</p>
-            <button>Talk to Us About Whiz Wiper<sup style="font-size: 60%;">™</sup></button>
-        </div>
-        <div class="hero-images">
-            <img src="images/website_main.png" alt="Whiz Wiper Main Image">
-        </div>
-    </section>
-
-    <section class="section" id="challenge">
-        <h2>The Challenge & Our Approach</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Persistent Hygiene Challenges</h3>
-                <p>High-traffic restrooms often suffer from inconsistent cleaning, particularly around urinals where manual cleaning can be labor-intensive and error-prone.</p>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Introducing Whiz Wiper<sup class="trademark">™</sup></h1>
+                    <h2>Automated Cleaning for Urinal Floors</h2>
+                    <p>Keep your restrooms consistently clean with a practical, automated solution designed for high-traffic urinals. No gimmicks—just a reliable way to simplify your cleaning routine.</p>
+                    <button class="cta-button primary-button">Talk to Us About Whiz Wiper<sup class="trademark">™</sup></button>
+                </div>
+                <div class="hero-images">
+                    <img src="images/website_main.png" alt="Whiz Wiper device illustration showing cleaning action near a urinal">
+                </div>
             </div>
-            <div class="card">
-                <h3>Our Practical Solution</h3>
-                <p>Whiz Wiper<sup style="font-size: 60%;">™</sup> automates urinal floor cleaning with smart sensors and robust design, ensuring consistent hygiene while reducing maintenance costs and effort.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="footer-cta" id="contact">
-        <h2>Get in Touch</h2>
-        <p>We’re looking to gather feedback and refine our approach. Talk to us about how Whiz Wiper<sup style="font-size: 60%;">™</sup> could help address your restroom cleaning challenges.</p>
-        <button>Talk to Us About Whiz Wiper<sup style="font-size: 60%;">™</sup></button>
-    </section>
+        <section class="section" id="challenge">
+            <h2>The Challenge & Our Approach</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Persistent Hygiene Challenges</h3>
+                    <p>High-traffic restrooms often suffer from inconsistent cleaning, particularly around urinals where manual cleaning can be labor-intensive and error-prone.</p>
+                </div>
+                <div class="card">
+                    <h3>Our Practical Solution</h3>
+                    <p>Whiz Wiper<sup class="trademark">™</sup> automates urinal floor cleaning with smart sensors and robust design, ensuring consistent hygiene while reducing maintenance costs and effort.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section footer-cta" id="contact">
+            <h2>Get in Touch</h2>
+            <p>We’re looking to gather feedback and refine our approach. Talk to us about how Whiz Wiper<sup class="trademark">™</sup> could help address your restroom cleaning challenges.</p>
+            <button class="cta-button secondary-button">Talk to Us About Whiz Wiper<sup class="trademark">™</sup></button>
+        </section>
+    </main>
 
     <footer>
-        <p style="margin: 0.5rem 0;">&copy; 2025 Whiz Wiper<sup style="font-size: 60%;">™</sup>. All rights reserved.</p>
-        <a href="privacy.html" target="_blank" style="color: #CBD5E1; text-decoration: underline; font-size: 0.875rem;">Privacy Policy</a>
+        <p>&copy; 2025 Whiz Wiper<sup class="trademark">™</sup>. All rights reserved.</p>
+        <a href="privacy.html" target="_blank">Privacy Policy</a>
     </footer>
 </body>
 </html>

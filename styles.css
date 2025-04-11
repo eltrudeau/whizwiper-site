@@ -1,299 +1,376 @@
-/* CSS Variables for theme management */
+/* === CSS Variables === */
+/* Define colors and fonts here for easy changes later */
 :root {
-  --primary-color: #0D1B2A;
-  --secondary-color: #1B263B;
-  --accent-color: #415A77;
-  --highlight-color: #778DA9;
-  --cta-color: #E0E1DD;
-  --bg-color: #F0F5F9;
-  --text-color: #333;
-  --white: #fff;
-  --container-max: 1200px;
+    --primary-dark: #0F172A;   /* Deep blue/black for footer, text */
+    --secondary-dark: #1E293B; /* Dark blue/gray for header */
+    --accent-gradient-start: #475569; /* Slate gray for hero top */
+    --accent-gradient-end: #64748B; /* Lighter slate gray for hero bottom */
+    --light-gray-bg: #F1F5F9; /* Very light gray for cards */
+    --light-gray-button: #E2E8F0; /* Light gray for secondary button */
+    --text-light: #FFFFFF;      /* White text */
+    --text-subtle: #CBD5E1;    /* Light gray text for footer */
+    --font-primary: 'Inter', sans-serif;
+    --container-padding: 2rem; /* Default padding for sections */
+    --container-padding-large: 6rem; /* Padding for hero/sections on larger screens */
 }
 
-/* Smooth scrolling */
+/* === Base & Typography === */
+/* Basic reset and global styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Consistent box model */
+    margin: 0;
+    padding: 0;
+}
+
 html {
-  scroll-behavior: smooth;
-}
-
-/* Skip link for accessibility */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--accent-color);
-  color: var(--white);
-  padding: 8px;
-  z-index: 100;
-  transition: top 0.3s;
-}
-.skip-link:focus {
-  top: 0;
-}
-
-/* Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links like #challenge */
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+    font-family: var(--font-primary);
+    color: var(--primary-dark);
+    background-color: var(--text-light);
+    line-height: 1.6; /* Improve overall text readability */
 }
 
-/* Container */
-.container {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 20px;
+/* Consistent heading styles */
+h1, h2, h3 {
+    line-height: 1.3; /* Tighter line height for headings */
+    margin-bottom: 1rem;
 }
 
-/* Header */
-header {
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-  color: var(--white);
-  padding: 20px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo {
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
+h1 { font-size: 2.8rem; font-weight: 700; }
+h2 { font-size: 2rem; font-weight: 600; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+p { margin-bottom: 1.5rem; }
+
+/* === Trademark Symbol Styling === */
+/* Centralized style for the TM symbol */
 .trademark {
-  font-size: 60%;
-  vertical-align: super;
+    font-size: 60%;
+    vertical-align: super; /* Ensures proper superscript alignment */
+    line-height: 0; /* Prevents affecting the line height of the parent text */
 }
 
-/* Navigation */
-nav {
-  position: relative;
-}
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-.nav-list li a {
-  color: var(--white);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-.nav-list li a:hover {
-  color: var(--highlight-color);
-}
-
-/* Mobile Navigation */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.hamburger {
-  width: 25px;
-  height: 3px;
-  background-color: var(--white);
-  position: relative;
-  display: block;
-}
-.hamburger::before,
-.hamburger::after {
-  content: "";
-  width: 25px;
-  height: 3px;
-  background-color: var(--white);
-  position: absolute;
-  left: 0;
-  transition: transform 0.3s ease;
-}
-.hamburger::before {
-  top: -8px;
-}
-.hamburger::after {
-  top: 8px;
-}
-
-/* Hero Section */
-#hero {
-  background: linear-gradient(135deg, var(--accent-color) 0%, var(--highlight-color) 100%);
-  color: var(--white);
-  padding: 80px 0;
-}
-.split-layout {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 40px;
-}
-.text-column {
-  flex: 1;
-  min-width: 300px;
-}
-.text-column h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-.text-column h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  font-weight: 400;
-}
-.hero-text {
-  font-size: 18px;
-  margin-bottom: 30px;
-  max-width: 600px;
-}
-.cta-button {
-  background-color: var(--cta-color);
-  color: var(--primary-color);
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 15px 30px;
-  border-radius: 30px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.cta-button:hover {
-  background-color: var(--white);
-  transform: translateY(-3px);
-}
-.image-column {
-  flex: 1;
-  min-width: 300px;
-}
-.image-column img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* Features Section */
-#features {
-  background-color: var(--white);
-  padding: 80px 0;
-  text-align: center;
-}
-#features h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: var(--primary-color);
-}
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-}
-.feature-item {
-  padding: 30px;
-  background-color: var(--bg-color);
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.feature-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-.feature-item h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: var(--secondary-color);
-}
-.feature-item p {
-  font-size: 16px;
-  color: var(--text-color);
-}
-
-/* Contact Section */
-#contact {
-  background-color: var(--secondary-color);
-  color: var(--white);
-  padding: 80px 0;
-  text-align: center;
-}
-#contact h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-#contact p {
-  font-size: 18px;
-  max-width: 700px;
-  margin: 0 auto 30px;
-  line-height: 1.5;
-}
-#contact .cta-button {
-  background-color: var(--cta-color);
-  color: var(--primary-color);
-  padding: 15px 30px;
-  border-radius: 30px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-#contact .cta-button:hover {
-  background-color: var(--white);
-  transform: translateY(-3px);
-}
-
-/* Footer */
-footer {
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: 20px 0;
-  text-align: center;
-  font-size: 14px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .nav-list {
-    flex-direction: column;
-    gap: 10px;
-    display: none;
-  }
-  .nav-list.active {
+/* === Header & Navigation === */
+header {
+    background-color: var(--secondary-dark);
+    color: var(--text-light);
+    padding: 1rem var(--container-padding);
     display: flex;
-  }
-  .nav-toggle {
-    display: block;
-  }
-  .split-layout {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .text-column h1 {
-    font-size: 36px;
-  }
-  .text-column h2 {
-    font-size: 28px;
-  }
-  .hero-text {
-    font-size: 16px;
-  }
-  .cta-button {
-    font-size: 16px;
-    padding: 12px 25px;
-  }
-  .feature-item h3 {
-    font-size: 20px;
-  }
-  .feature-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on very small screens */
+    gap: 1rem; /* Spacing between logo and nav if they wrap */
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.2s ease; /* Smooth color transition on hover */
+}
+
+/* Add hover and focus states for better accessibility and UX */
+nav a:hover,
+nav a:focus {
+    color: var(--text-subtle); /* Slightly fade on hover/focus */
+    outline: none; /* Remove default browser outline */
+    text-decoration: underline; /* Add underline on hover/focus */
+}
+
+/* === Hero Section === */
+.hero {
+    background: linear-gradient(to bottom, var(--accent-gradient-start), var(--accent-gradient-end));
+    color: var(--text-light);
+    padding: var(--container-padding-large) var(--container-padding);
+    text-align: center; /* Center align content by default, override later if needed */
+}
+
+/* Container for hero content to manage layout and max-width */
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem; /* Space between text and image */
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    max-width: 1200px; /* Constrain width on very large screens */
+    margin: 0 auto; /* Center the content container */
+    text-align: left; /* Align text left within the container */
+}
+
+.hero-text {
+    flex: 1 1 450px; /* Flexible basis, allow growing/shrinking, prefer 450px width */
+    max-width: 600px; /* Limit text width for readability */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    /* white-space: nowrap; /* Removed to allow wrapping if needed, especially on smaller screens */
+    margin-bottom: 0.75rem;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: 400; /* Lighter weight for subtitle */
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.hero-images {
+    flex: 1 1 400px; /* Flexible basis, prefer 400px width */
+    max-width: 500px; /* Limit image container size */
+}
+
+.hero-images img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0.75rem; /* Slightly larger radius */
+    display: block; /* Remove extra space below image */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Add subtle depth */
+}
+
+/* === Buttons === */
+/* Base button styles */
+.cta-button {
+    padding: 1rem 2rem;
+    border-radius: 9999px; /* Pill shape */
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease; /* Smooth transitions */
+    display: inline-block; /* Ensure proper spacing and alignment */
+    text-align: center;
+    text-decoration: none; /* Remove underline if used on <a> tags styled as buttons */
+}
+
+/* Add hover and active states */
+.cta-button:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+.cta-button:active {
+    transform: translateY(0); /* Return to normal on click */
+    box-shadow: none;
+}
+
+/* Focus state for accessibility */
+.cta-button:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.7); /* Visible focus outline */
+    outline-offset: 2px;
+}
+.secondary-button:focus {
+     outline: 3px solid rgba(0, 0, 0, 0.2); /* Darker outline for light button */
+}
+
+
+/* Specific button styles */
+.primary-button {
+    background-color: var(--text-light); /* White background */
+    color: var(--secondary-dark); /* Dark text */
+}
+.primary-button:hover {
+    background-color: var(--light-gray-button); /* Slightly darker on hover */
+}
+
+.secondary-button {
+    background-color: var(--light-gray-button);
+    color: var(--primary-dark);
+    margin-top: 2rem; /* Specific margin for footer button */
+}
+.secondary-button:hover {
+    background-color: #D1D5DB; /* Darker gray on hover */
+}
+
+/* === General Section Styling === */
+/* Common styles for content sections */
+.section {
+    padding: var(--container-padding-large) var(--container-padding);
+    text-align: center;
+    max-width: 1100px; /* Limit width of content sections for readability */
+    margin: 0 auto; /* Center sections horizontally */
+}
+
+.section h2 {
+    margin-bottom: 3rem;
+}
+
+/* === Cards Section === */
+.cards {
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+    gap: 2rem; /* Space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap onto next line */
+}
+
+.card {
+    background-color: var(--light-gray-bg);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    flex: 1 1 300px; /* Allow cards to grow/shrink, base width 300px */
+    max-width: 450px; /* Max width for cards */
+    text-align: left; /* Align text inside cards to the left */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover */
+}
+
+/* Add hover effect to cards */
+.card:hover {
+    transform: translateY(-5px); /* Lift card slightly */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Increase shadow */
+}
+
+.card h3 {
+    margin-bottom: 0.75rem;
+    color: var(--secondary-dark);
+}
+
+/* === Footer CTA Section === */
+/* Style the final call-to-action section */
+.footer-cta {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    /* Uses .section padding for sides and max-width/margin */
+}
+
+.footer-cta p {
+    max-width: 700px; /* Limit paragraph width for readability */
+    margin-left: auto;
+    margin-right: auto; /* Center the paragraph */
+}
+
+/* === Footer === */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--text-subtle);
+    text-align: center;
+    padding: 1.5rem var(--container-padding); /* Increased padding */
+    font-size: 0.875rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem; /* Space between copyright and link */
+}
+
+footer a {
+    color: var(--text-subtle);
+    text-decoration: underline;
+    transition: color 0.2s ease; /* Smooth color transition */
+}
+
+/* Add hover/focus state for footer link */
+footer a:hover,
+footer a:focus {
+    color: var(--text-light); /* Brighter color on hover/focus */
+    outline: none;
+}
+
+
+/* === Responsive Adjustments === */
+/* Styles for screens smaller than 992px (Tablets, smaller desktops) */
+@media (max-width: 992px) {
+    :root {
+        --container-padding-large: 4rem; /* Reduce large padding */
+    }
+    /* Adjust heading sizes */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    .hero h1 { font-size: 2.5rem; }
+    .hero h2 { font-size: 1.3rem; }
+
+    /* Adjust flex basis for hero content */
+    .hero-text { flex-basis: 400px; }
+    .hero-images { flex-basis: 350px; }
+}
+
+/* Styles for screens smaller than 768px (Mobile phones) */
+@media (max-width: 768px) {
+    :root {
+        --container-padding: 1.5rem; /* Adjust base padding */
+        --container-padding-large: 3rem; /* Further reduce large padding */
+    }
+
+    /* Adjust header layout for mobile */
+    header {
+        justify-content: center; /* Center logo and nav when they stack */
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        text-align: center;
+    }
+    nav {
+        margin-top: 0.5rem; /* Add space if nav wraps below logo */
+        width: 100%; /* Allow nav to take full width */
+    }
+    nav a {
+        margin: 0 0.75rem; /* Adjust nav link spacing */
+        display: inline-block; /* Ensure proper spacing */
+        margin-bottom: 0.5rem; /* Spacing if links wrap */
+    }
+
+    /* Stack hero content vertically */
+    .hero-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .hero {
+        text-align: center; /* Center text when stacked */
+    }
+    .hero-text {
+        max-width: 100%; /* Allow text to use full width */
+        text-align: center;
+        flex-basis: auto; /* Reset flex basis */
+    }
+    .hero-images {
+        flex-basis: auto; /* Reset flex basis */
+        max-width: 80%; /* Slightly constrain image width */
+        margin: 0 auto; /* Center image */
+    }
+
+    /* Adjust heading sizes for mobile */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero h2 { font-size: 1.2rem; }
+    .hero p { font-size: 1rem; }
+
+    .section h2 { font-size: 1.6rem; margin-bottom: 2rem; }
+
+    /* Stack cards vertically */
+    .cards {
+        gap: 1.5rem; /* Reduce gap between cards */
+    }
+    .card {
+        flex-basis: 100%; /* Make cards full width */
+        max-width: 100%;
+    }
+
+    /* Adjust footer CTA */
+    .footer-cta {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+    /* Make buttons full width on mobile, but with a max-width */
+    .cta-button {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.95rem;
+        width: 100%;
+        max-width: 350px;
+    }
+    .secondary-button {
+         margin-top: 1.5rem;
+    }
 }

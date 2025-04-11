@@ -28,7 +28,6 @@
 
     <footer>
         <p>&copy; 2025 Whiz Wiper<sup style="font-size: 60%;">™</sup>. All rights reserved.</p>
-        <p><a href="#" onclick="window.open('privacy.html', '_blank')">Privacy Policy</a></p>
     </footer>
 </body>
 </html>
@@ -70,7 +69,7 @@ section {
     border-radius: 10px;
 }
 
-/* Details Section */
+/* Details Section - Adjust Size and Padding */
 #details {
     font-size: 20px;
     padding: 10px;
@@ -127,28 +126,23 @@ footer {
     margin-top: 10px;
 }
 
-footer a {
-    color: #62A5BE;
-    text-decoration: underline;
-}
-
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .header-title {
-        font-size: 28px;
+        font-size: 28px; /* Smaller title for mobile */
     }
     .header-subtitle {
-        font-size: 16px;
+        font-size: 16px; /* Smaller subtitle */
     }
     .contact-button {
-        font-size: 16px;
-        padding: 8px 16px;
+        font-size: 16px; /* Adjust button font size */
+        padding: 8px 16px; /* Reduce padding for mobile */
     }
     section {
         padding: 15px;
         margin: 15px auto;
     }
     .product-main img {
-        width: 100%;
+        width: 100%; /* Ensures image scales properly on small screens */
     }
 }

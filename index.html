@@ -39,24 +39,32 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 4rem 2rem;
+            padding: 6rem 6rem;
             background: linear-gradient(to bottom, #475569, #64748B);
             color: white;
             flex-wrap: wrap;
+            gap: 3rem;
         }
 
         .hero-text {
             max-width: 500px;
+            flex: 1 1 300px;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .hero p {
             font-size: 1.125rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
         }
 
         .hero button {
@@ -70,11 +78,7 @@
         }
 
         .hero-images {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 0.5rem;
-            margin-left: 2rem;
-            max-width: 500px;
+            flex: 1 1 400px;
         }
 
         .hero-images img {
@@ -83,13 +87,13 @@
         }
 
         .section {
-            padding: 4rem 2rem;
+            padding: 6rem 2rem;
             text-align: center;
         }
 
         .section h2 {
             font-size: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         .cards {
@@ -105,13 +109,14 @@
             border-radius: 0.75rem;
             flex: 1 1 300px;
             max-width: 400px;
+            text-align: left;
         }
 
         .footer-cta {
             background-color: #1E293B;
             color: white;
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 6rem 2rem;
         }
 
         .footer-cta button {
@@ -152,8 +157,8 @@
             <button>Talk to Us About Whiz Wiper<sup style="font-size: 60%;">™</sup></button>
         </div>
         <div class="hero-images">
-    <img src="images/website_main.png" alt="Whiz Wiper Main Image">
-</div>
+            <img src="images/website_main.png" alt="Whiz Wiper Main Image">
+        </div>
     </section>
 
     <section class="section" id="challenge">

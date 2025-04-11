@@ -1,100 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Whiz Wiper™: Automated cleaning for urinal floors in high‑traffic restrooms.">
-  <title>Whiz Wiper™ - Automated Urinal Floor Cleaning</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whiz Wiper<sup style="font-size: 60%;">™</sup></title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <header>
-    <div class="container">
-      <div class="header-content">
-        <div class="logo">Whiz Wiper<span class="trademark">™</span></div>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span class="hamburger"></span>
-        </button>
-        <nav>
-          <ul class="nav-list">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#features">The Challenge</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
-  
-  <main id="main-content">
-    <section id="hero">
-      <div class="container">
-        <div class="split-layout">
-          <div class="text-column">
-            <h1>Introducing Whiz Wiper™</h1>
-            <h2>Automated Cleaning for Urinal Floors</h2>
-            <p class="hero-text">
-              Keep your restrooms consistently clean with a practical, automated solution designed for high‑traffic urinals. No gimmicks—just a reliable way to simplify your cleaning routine.
-            </p>
-            <a href="mailto:Ed@whizwiper.com?subject=Talk%20to%20Us%20About%20Whiz%20Wiper" class="cta-button">Talk to Us About Whiz Wiper™</a>
-          </div>
-          <div class="image-column">
-            <img src="images/website_main.png" alt="Whiz Wiper cleaning a urinal floor" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </section>
+    <header>
+        <h1 class="header-title">Whiz Wiper<sup style="font-size: 60%;">™</sup></h1>
+        <p class="header-subtitle">The Future of Restroom Hygiene.</p>
+    </header>
 
-    <section id="features">
-      <div class="container">
-        <h2>The Challenge & Our Approach</h2>
-        <div class="feature-grid">
-          <div class="feature-item">
-            <h3>Persistent Hygiene Challenges</h3>
-            <p>
-              High-traffic restrooms often suffer from inconsistent cleaning, particularly around urinals where manual cleaning can be labor-intensive and error-prone.
-            </p>
-          </div>
-          <div class="feature-item">
-            <h3>Our Practical Solution</h3>
-            <p>
-              Whiz Wiper™ automates urinal floor cleaning with smart sensors and robust design, ensuring consistent hygiene while reducing maintenance costs and effort.
-            </p>
-          </div>
-        </div>
-      </div>
+    <section id="details">
+        <p>Whiz Wiper<sup style="font-size: 60%;">™</sup> is an automatic cleaning system designed to keep restroom floors hygienic with minimal effort. We are currently in the testing phase and seeking feedback from businesses to refine the product and identify pilot sites.</p>
     </section>
 
     <section id="contact">
-      <div class="container">
-        <h2>Get in Touch</h2>
-        <p>
-          We’re looking to gather feedback and refine our approach. Talk to us about how Whiz Wiper™ could help address your restroom cleaning challenges.
-        </p>
-        <a href="mailto:Ed@whizwiper.com?subject=Talk%20to%20Us%20About%20Whiz%20Wiper" class="cta-button">Talk to Us About Whiz Wiper™</a>
-      </div>
+        <p class="contact-text">To learn more or provide product feedback, please <a href="mailto:Ed@whizwiper.com?subject=I'm%20Interested%20in%20Learning%20About%20Whiz%20Wiper" class="contact-button">Contact Us</a>.</p>
     </section>
-  </main>
 
-  <footer>
-    <div class="container">
-      <p>© 2025 Whiz Wiper™. All rights reserved.</p>
-    </div>
-  </footer>
+    <section id="product-images">
+        <div class="product-main">
+            <img src="images/website_main.png" alt="Main Product Image">
+        </div>
+    </section>
 
-  <script>
-    // Mobile navigation toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const navList = document.querySelector('.nav-list');
-
-    navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', !expanded);
-      navList.classList.toggle('active');
-    });
-  </script>
+    <footer>
+        <p>&copy; 2025 Whiz Wiper<sup style="font-size: 60%;">™</sup>. All rights reserved.</p>
+        <p><a href="#" onclick="window.open('privacy.html', '_blank')">Privacy Policy</a></p>
+    </footer>
 </body>
 </html>
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #182B35;
+}
+
+/* Header */
+header {
+    background-color: #182B35;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header-title {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.header-subtitle {
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+/* Sections */
+section {
+    padding: 10px;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Details Section */
+#details {
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Contact Us */
+#contact {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #62A5BE;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #4A90A3;
+}
+
+/* Product Image */
+.product-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+.product-main img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #182B35;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+footer a {
+    color: #62A5BE;
+    text-decoration: underline;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 28px;
+    }
+    .header-subtitle {
+        font-size: 16px;
+    }
+    .contact-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    section {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    .product-main img {
+        width: 100%;
+    }
+}

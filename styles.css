@@ -3,8 +3,6 @@
 :root {
     --primary-dark: #0F172A;   /* Deep blue/black for footer, text */
     --secondary-dark: #1E293B; /* Dark blue/gray for header, primary button */
-    /* --accent-gradient-start: #475569; /* Slate gray for hero top (Old) */
-    /* --accent-gradient-end: #64748B; /* Lighter slate gray for hero bottom (Old) */
     --accent-color: #62a5be;  /* NEW: Accent color from user image for hero */
     --light-gray-bg: #F1F5F9; /* Very light gray for cards */
     --light-gray-button: #E2E8F0; /* Light gray for secondary button */
@@ -110,8 +108,7 @@ nav a:focus {
 
 /* === Hero Section === */
 .hero {
-    /* background: linear-gradient(to bottom, var(--accent-gradient-start), var(--accent-gradient-end)); /* Old Gradient */
-    background-color: var(--accent-color); /* NEW: Use solid accent color */
+    background-color: var(--accent-color); /* Use solid accent color */
     color: var(--text-light);
     padding: var(--container-padding-large) var(--container-padding);
     text-align: center; /* Center align content by default, override later if needed */
@@ -122,7 +119,7 @@ nav a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 4rem; /* Increased gap */
+    gap: 3rem; /* UPDATED: Slightly reduced gap */
     flex-wrap: wrap; /* Allow content to wrap on smaller screens */
     max-width: 1200px; /* Constrain width on very large screens */
     margin: 0 auto; /* Center the content container */
@@ -130,8 +127,9 @@ nav a:focus {
 }
 
 .hero-text {
-    flex: 1 1 450px; /* Flexible basis, allow growing/shrinking, prefer 450px width */
-    max-width: 600px; /* Limit text width for readability */
+    /* UPDATED: Reduced basis and max-width to give image more space */
+    flex: 1 1 420px;
+    max-width: 580px;
 }
 
 .hero h1 {
@@ -156,8 +154,9 @@ nav a:focus {
 }
 
 .hero-images {
-    flex: 1 1 400px; /* Flexible basis, prefer 400px width */
-    max-width: 500px; /* Limit image container size */
+     /* UPDATED: Increased basis and max-width to make image larger */
+    flex: 1 1 480px;
+    max-width: 620px;
 }
 
 .hero-images img {
@@ -207,14 +206,11 @@ nav a:focus {
 
 /* Specific button styles */
 .primary-button {
-    /* background-color: var(--text-light); /* Old */
-    /* color: var(--secondary-dark); /* Old */
-    background-color: var(--secondary-dark); /* NEW: Dark background for contrast on hero */
-    color: var(--text-light); /* NEW: Light text */
+    background-color: var(--secondary-dark); /* Dark background for contrast on hero */
+    color: var(--text-light); /* Light text */
 }
 .primary-button:hover {
-    /* background-color: var(--light-gray-button); /* Old */
-    background-color: var(--primary-dark); /* NEW: Slightly darker on hover */
+    background-color: var(--primary-dark); /* Slightly darker on hover */
 }
 
 .secondary-button {
@@ -339,10 +335,10 @@ footer a:focus {
     .hero h1 { font-size: 2.8rem; } /* Adjust hero h1 */
     .hero h2 { font-size: 1.4rem; } /* Adjust hero h2 */
 
-    /* Adjust flex basis for hero content */
-    .hero-text { flex-basis: 55%; } /* Give text slightly more space */
-    .hero-images { flex-basis: 40%; }
-    .hero-content { gap: 3rem; } /* Adjust gap */
+    /* UPDATED: Adjust flex basis for hero content on tablets */
+    .hero-text { flex-basis: 50%; }
+    .hero-images { flex-basis: 45%; }
+    .hero-content { gap: 2.5rem; } /* Adjust gap */
 }
 
 /* Styles for screens smaller than 768px (Mobile phones) */
